@@ -1,0 +1,42 @@
+body {
+    background-color: #0d0d0d; /* Negro profundo */
+    color: #00ffcc; /* Verde neón/cyborg */
+    font-family: 'Courier New', Courier, monospace;
+    
+    /* Esto hace que el contenido ocupe siempre el alto de la pantalla */
+    min-height: 200vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Textura orgánica/experimental de fondo */
+    background-image: radial-gradient(circle, #746113 1px, transparent 1px);
+    background-size: 30px 30px; 
+}
+.titulo {
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(18, 75, 98);
+  position: relative;
+}
+
+h1 {
+    font-size: clamp(2rem, 10vw, 4rem); /* Se adapta al tamaño del monitor */
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055; /* Resplandor rojizo visceral */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+a {
+    position: absolute;
+    font-size: 50px;
+    text-decoration: none;
+    bottom: 1vh;
+
+}
+
+a:visited, a:active{
+    color: rgb(128, 111, 0)
+}
