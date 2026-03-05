@@ -1,42 +1,43 @@
 body {
-    background-color: #0d0d0d; /* Negro profundo */
-    color: #00ffcc; /* Verde neón/cyborg */
-    font-family: 'Courier New', Courier, monospace;
-    
-    /* Esto hace que el contenido ocupe siempre el alto de la pantalla */
-    min-height: 200vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #1b1b1b; /* Negro profundo */
+    color: #f2c6b6; /* Verde neón/cyborg */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex; /*así el contenedor se vuelve flex container y sus hijos se organizan de manera flexible*/
     justify-content: center;
+    align-items: center;
+    height: 100vh; /*vh= viewport height o alatura de pantalla. 100 es la altura total de la pantalla*/
     
     /* Textura orgánica/experimental de fondo */
-    background-image: radial-gradient(circle, #746113 1px, transparent 1px);
-    background-size: 30px 30px; 
+    /*background-image: radial-gradient(circle, #746113 1px, transparent 1px);
+    background-size: 30px 30px; */
+    
 }
-.titulo {
-  width: 100%;
-  height: 70vh;
-  background-color: rgb(18, 75, 98);
-  position: relative;
-}
-
-h1 {
-    font-size: clamp(2rem, 10vw, 4rem); /* Se adapta al tamaño del monitor */
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055; /* Resplandor rojizo visceral */
-    margin-bottom: 2rem;
+#titulo {
     text-align: center;
 }
-a {
-    position: absolute;
-    font-size: 50px;
-    text-decoration: none;
-    bottom: 1vh;
 
+h1{
+    font-size: 60px;
+    letter-spacing: 5px; /*espacio entre letras*/
+    color: #ff6b6b;
 }
 
+/* link */
+
+a{
+    display: inline-block; /*Se comporta como texto pero tiene tamaño y margen - permite que el link tenga tamaño, borde y se comporte como un bloque (es por seguridad, sin esto alguno estilos no funcionan)*/
+    margin-top: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffd166;
+    transition: 0.3s; /*cualquie cambio visual se hará por 0.3s*/
+
+}
+a:hover{ /*cuando el mouse está encima*/
+    color: #00fff7;
+    transform: scale(1.1); /*agranda el elemento*/
+}
 a:visited, a:active{
-    color: rgb(128, 111, 0)
+    color: #ffd166;
 }
