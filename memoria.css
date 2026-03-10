@@ -6,6 +6,7 @@ body{
     font-family:"Special Elite", monospace;
     margin:0;
     overflow:hidden; /*evita que salgan barras de scroll si algo se sale*/
+    cursor: pointer;
 }
 
 h1{

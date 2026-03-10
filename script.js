@@ -1,6 +1,7 @@
 // Código para index.html---------------------------------------------------------------------------------
 const varTitulo = document.getElementById("titulo");
 const sonido = document.getElementById("sonido");
+const varSubti = document.querySelector(".subtitulo");
 
 if(varTitulo){
 
@@ -26,11 +27,38 @@ varTitulo.addEventListener("click", ()=> {
         sonidoActivado = true;
     }
 });
-};
+}
 
+const subtitulos = [
+    "¿Conoces tu cuerpo?",
+    "¿Te has preguntado si sabes escucharle?",
+    "¿Valoras lo corporal?",
+    "¿Eres consciente de las sensaciones corporales?",
+    "¿Qué pasa si sientes tu piel?",
+    "¿Cómo se siente la textura de tu ropa encima de esta?",
+    "¿Qué pasa si dejas de fruncir el ceño?",
+    "¿Qué tal te parece sentarte bien?",
+    "¿Crees que hay cosas que no puedes hacer?",
+    "¿Y si subes los pies a la mesa o te tiras al suelo?",
+    "¿Crees que puedes respirar profundo mientras haces ruido?",
+    "¡Ten presente que el cuerpo también es una forma de control social!",
+    "Sigue adelante por donde quieras empezar:"
+];
+let iTxt = 0;
+
+if(varSubti) {
+varSubti.addEventListener("click", ()=> {
+    varSubti.innerText = subtitulos[iTxt]
+    iTxt += 1; // iTxt = iTxt + 1
+    if(iTxt >= subtitulos.length){ //devuelve al inicio sin importar el número de elementos en la lista
+        iTxt = 0
+    };
+});
+}
 
 // Código para memoria.html---------------------------------------------------------------------------------
 const lienzo = document.getElementById("lienzo");
+
 if(lienzo){
 const memorias = [
     "mis rodillas recuerdan las escaleras de mi infancia",
@@ -53,8 +81,11 @@ const memorias = [
     "ciertas puertas todavía viven en mis manos",
     "mis ojos recuerdan la luz de habitaciones que ya no existen",
     "mi respiración cambia cuando paso por ciertas calles"
-]
+];
+
 const musicaMemo = document.getElementById("musicaMemoria");
+
+if(musicaMemo) {
 let musicaMemoria = false;
 document.addEventListener("click", ()=> {
     if (musicaMemoria === false){ 
@@ -62,8 +93,10 @@ document.addEventListener("click", ()=> {
         musicaMemoria = true;
     }
 });
+}
 
 document.addEventListener("click", crearMemoria);// document es el elemento que representa toda la página de HTML
+
 function crearMemoria(){
     const texto = document.createElement("p"); //crea un espacio nuevo tipo párrafo
     const indice = Math.floor(Math.random()*memorias.length);
@@ -75,8 +108,8 @@ function crearMemoria(){
     texto.innerText = memorias[indice];//innerText trae el texto de html-indice: saca un elemento de una posición
     texto.classList.add("memoria");//classList: permite manejar las clases de un elemento (como si fuera una lista de etiquetas)
     //add.("memoria"): es como si <p> pasara a ser <p class:"memoria">
-    const x = Math.random()*window.innerWidth; // window.innerwidth/Height = medidas exactas de la ventana del navegador del usuario en ese momento.
-    const y = Math.random()*window.innerHeight; //multiplicar Math.random (da un número entre 0 y 1) por el ancho o alto de la pantalla
+    const x = numeroAleatorio(0, window.innerWidth - 150); // window.innerwidth/Height = medidas exactas de la ventana del navegador del usuario en ese momento.
+    const y = numeroAleatorio(0, window.innerHeight - 200); //multiplicar Math.random (da un número entre 0 y 1) por el ancho o alto de la pantalla
     //se obtiene una coordenada horizontal/vertical aleatoria.
     texto.style.left = x + "px";//controla la distancia desde el borde izquierdo de la pantalla hacia la derecha
     texto.style.top = y + "px";//controla la distancia desde el borde superior de la pantalla hacia abajo
@@ -85,3 +118,7 @@ function crearMemoria(){
     document.getElementById("lienzo").appendChild(texto); //append(añade)child = toma el párrado y lo añade al lienzo
 };
 };
+
+function numeroAleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min) + min)
+}

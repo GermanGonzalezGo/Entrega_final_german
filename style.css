@@ -35,6 +35,7 @@ body {
     margin-top: 10px;
     color: #d8b4a6;
     font-size: 30px;
+    cursor:pointer;
 }
 
 .exploracion{ /*aquí se logra que los links se ajusten automáticamente*/
@@ -61,7 +62,6 @@ h1{
     color: #ff6b6b;
     text-shadow:0 0 10px rgba(255,107,107,0.4);
 }
-
 /* link */
 
 a{
@@ -71,6 +71,10 @@ a{
     text-decoration: none;
     color: #ffd166;
     transition: 0.3s; /*cualquie cambio visual se hará por 0.3s*/
+
+}
+
+.subtitulo a:hover{
 
 }
 .exploracion a:hover{ /*cuando el mouse está encima*/
