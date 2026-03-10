@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body{
+    background-color: #111;
+    color: #e6d8d0;
+    font-family:"Special Elite", monospace;
+    margin:0;
+    overflow:hidden; /*evita que salgan barras de scroll si algo se sale*/
+}
+
+h1{
+    text-align: center;
+    margin: top 40px;
+}
+
+#lienzo{
+    position:relative; /*así no se mueve de su lugar*/
+    width: 100vw;
+    height: 100vh;
+}
+
+.memoria{
+    position:absolute;
+    max-width: 250px; /*limita el ancho del elemento*/
+    font-size: 20px;
+}

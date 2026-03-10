@@ -1,6 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'); /*fuente memoria*/
+@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap'); /*fuente cuerpo*/
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap'); /*fuente ruptura*/
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap'); /*fuente tecnología*/
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap'); /*fuente espíritu*/
 
 body {
     background-color: #1a1a1a; /* Negro profundo */
@@ -53,8 +55,6 @@ body {
     transition:0.3s;
 }
 
-
-
 h1{
     font-size: 60px;
     letter-spacing: 5px; /*espacio entre letras*/
@@ -81,13 +81,31 @@ a:visited, a:active{
     color: #ffd166;
 }
 #memoria{
-    font-family: 'Stardom', sans-serif;
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #cuerpo{
-    font-family: "Jolly Lodger", system-ui;
+    font-family: "Elsie", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #ruptura{
-    font-family: 'Stardom', sans-serif;
+    font-family: "Syne Mono", monospace;
+    font-weight: 200;
+    font-style: normal;
+}
+
+#tecnologia{
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#espiritu{
+    font-family: "Federo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
