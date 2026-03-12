@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap'); 
+
+body{
+background:black;
+background-image:url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+color:#00ffe1;
+font-family: "Goldman", sans-serif;
+}
+
+.imagen{
+    height:170px;
+    width:150px;
+    margin:0 auto;
+    filter: contrast(1.2) brightness(1.1);/*aplica un filtro relevado para que destaque más*/
+    box-shadow:0 0 10px #00ffe1,/*0 0 = la sombra no se desplaza sino que nace justo donde está el objeto, los 10px crea un borde nítido de color*/
+     0 0 20px #00ffe1, /*resplandor que rodea el objeto*/
+     0 0 40px #00ffe1; /*crea el "aura" difusa*/
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: #30cac073;
+  color: #130808;
+}
+
+h2 {
+  font-size: 1.1em;
+  
+}
+
+a, a:active, a:visited, a:hover {
+  color: rgb(193, 120, 199);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#contenedorGeneral {
+  margin: auto 1em;
+  text-align: center;
+}
+
+#tituloPagina {
+    margin-top: 1em;
+    margin-bottom: 0;
+    margin-bottom: 0.5em;
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#tituloPagina:hover {
+  color: pink;
+  cursor: pointer;
+}
+
+#contenedorPersonaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#boton {
+  font-size: 2em;
+  background-color:  rgb(16, 9, 17);
+  color: white;
+  cursor: pointer;
+  border:2px solid #00ffe1;
+  color:#00ffe1;
+  padding:10px 20px;
+  font-family:"Goldman";
+  transition:0.3s;
+}
+
+#boton:hover{
+    background:#00ffe1;
+    color:black;
+
+}
+
+a{
+    display: inline-block; /*Se comporta como texto pero tiene tamaño y margen - permite que el link tenga tamaño, borde y se comporte como un bloque (es por seguridad, sin esto alguno estilos no funcionan)*/
+    margin-top: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffd166;
+    transition: 0.3s; /*cualquie cambio visual se hará por 0.3s*/
+    border:1px solid #ff6b6b; /*Dibuja un borde sólido de 1 píxel alrededor del enlace*/
+    padding:12px 22px;
+}
+a:visited, a:active{
+    color: #ffd166;
+}

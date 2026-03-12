@@ -154,3 +154,58 @@ elementosParallax.forEach(el => {
 });
 
 });
+
+//codigo para tecnologia.html---------------------------------------------------------------------------------
+
+const listaCabezas = [
+  "https://i.pinimg.com/736x/42/84/97/428497d989a4239adb267e8e944b9339.jpg",
+  "https://i.pinimg.com/736x/0e/20/5f/0e205fb4ce457bd91042dcd51302e333.jpg",
+  "https://i.pinimg.com/1200x/da/2c/83/da2c8388eb42e2cda937924cf6884d98.jpg",
+];
+const listaTroncos = [
+    "https://i.pinimg.com/1200x/96/84/c7/9684c7b64788dda6d7b798906d55909d.jpg",
+    "https://i.pinimg.com/1200x/58/e9/41/58e941c2bf4d746d935440a036a6e80e.jpg",
+    "https://i.pinimg.com/736x/1d/f7/5d/1df75d228042b1382fc23fd289e914b7.jpg",
+];
+const listaPatas = [
+  "https://i.pinimg.com/1200x/67/f3/9d/67f39d0ab7033826fb7830f62f70d759.jpg",
+  "https://i.pinimg.com/736x/de/76/bb/de76bba8b2c712a21863de5272987c18.jpg",
+  "https://i.pinimg.com/736x/46/f9/8b/46f98b6006211122a7c551fa0a949b99.jpg",
+];
+
+// Obtenemos los contenedores de las imágenes del HTML usando los IDs
+const cabeza = document.getElementById("cabeza");
+const tronco = document.getElementById("tronco");
+const patas = document.getElementById("patas");
+const boton = document.getElementById("boton");
+
+// Inicializamos las variables de los números aleatorios
+let cabezaAleatorio = 0;
+let troncoAleatorio = 0;
+let patasAleatorio = 0;
+
+// Función para generar un número aleatorio entre dos valores
+function numeroAleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+// Función para crear una nueva bestia con tres imágenes elegidas aleatoriamente
+function generarBestia() {
+  cabezaAleatorio = numeroAleatorio(0, listaCabezas.length);
+  troncoAleatorio = numeroAleatorio(0, listaTroncos.length);
+  patasAleatorio = numeroAleatorio(0, listaPatas.length);
+
+  // Asignamos la nueva fuente (source) a cada imagen
+  cabeza.src = `${listaCabezas[cabezaAleatorio]}`; //ruta + listaCabezas[cabezaAleatorio];
+  tronco.src = `${listaTroncos[troncoAleatorio]}`;
+  patas.src = `${listaPatas[patasAleatorio]}`;
+
+  console.log(cabezaAleatorio, troncoAleatorio, patasAleatorio);
+}
+
+// Generamos un nuevo collage cada vez que hacemos click en el botón "mezclar"
+boton.addEventListener("click", function () {
+  generarBestia();
+});
+
+generarBestia();
