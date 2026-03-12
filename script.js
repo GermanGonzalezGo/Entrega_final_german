@@ -154,6 +154,11 @@ elementosParallax.forEach(el => {
 });
 
 });
+const cancion = document.querySelector("audio");
+
+document.addEventListener("click", () => {
+    cancion.play();
+});
 
 //codigo para tecnologia.html---------------------------------------------------------------------------------
 
