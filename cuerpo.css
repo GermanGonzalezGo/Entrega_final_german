@@ -52,7 +52,7 @@ a{
     z-index: 10;/*así el link queda por encima de todo lo del index*/
 }
 a:visited, a:active{
-    color: #777373;
+    color: #777373; 
 }
 a:hover{
     transform: scale(1.1);
