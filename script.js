@@ -122,3 +122,21 @@ function crearMemoria(){
 function numeroAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
+
+// Código para cuerpo.html ---------------------------------------------------------------------------------
+if(lienzoCuerpo){
+const videos = document.querySelectorAll(".video");//esto llama a todos los elementos con la clase video en el html
+
+videos.forEach(video =>{ //para cada video de la lista hace lo que está dentro
+    const x = Math.random() * (window.innerWidth - 260); 
+    //Math.random genera un numero aleatorio entre 0 y 1 y multiplicarlo por el ancho de la pantalla genera una 
+    //posición hoizontal aleatoria (lo mismo para Height) los - 320 y 180 son los pixeles que no se tienen en cuenta
+    const y = Math.random() * (window.innerHeight - 150);
+
+    //con video.style se accede al css
+    //left y top cambian las coordenadas horizontales o verticales
+    //px son la unidad de medida 
+    video.style.left = x + "px";
+    video.style.top = y + "px";
+});
+};

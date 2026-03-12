@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap');
+
+body{
+    margin:0;
+    overflow:hidden; /*esto evita que se muestren cosas del lienzo fuera de este*/
+    background: radial-gradient(circle at center, #222222, #000000);
+    color:#eee;
+    font-family: "Elsie", serif;
+    /*display:flex; /*así el contenedor se vuelve flex container y sus hijos se organizan de manera flexible
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+    margin-top:50px; por ahora esto no ya que organiza todo como en la primera versión*/
+}
+
+h1{
+    text-align: center;
+    margin-top:30px;
+    letter-spacing:3px;
+}
+
+#lienzoCuerpo{
+    position:relative;/*recuerda que relative es el padre y absolute el hijo*/
+    width:100vw;
+    height:100vh;
+}
+
+
+.video{
+    position:absolute;
+    width:260px;
+    height:150px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition:0.4s;
+}
+
+.video:hover{
+transform:scale(1.1);
+}
+
+a{
+    display: inline-block; /*Se comporta como texto pero tiene tamaño y margen - permite que el link tenga tamaño, borde y se comporte como un bloque (es por seguridad, sin esto alguno estilos no funcionan)*/
+    font-size: 20px;
+    text-decoration: none;
+    color: #504e4e;
+    transition: 0.3s; /*cualquie cambio visual se hará por 0.3s*/
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border:1px solid #4a4545;
+    padding:10px 10px; /*cuanta distancia hay entre el contenido y la margen*/
+    z-index: 10;/*así el link queda por encima de todo lo del index*/
+}
+a:visited, a:active{
+    color: #777373;
+}
+a:hover{
+    transform: scale(1.1);
+}

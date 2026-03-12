@@ -28,3 +28,23 @@ h1{
     line-height: 1.4;/*la altura de la línea será 1.4 veces el tamaño de la letra*/
     opacity: 0.85;/*85% de opacidad*/
 }
+
+a{
+    display: inline-block; /*Se comporta como texto pero tiene tamaño y margen - permite que el link tenga tamaño, borde y se comporte como un bloque (es por seguridad, sin esto alguno estilos no funcionan)*/
+    font-size: 20px;
+    margin-top:1px;
+    text-decoration: none;
+    color: #2b2b2b;
+    transition: 0.3s; /*cualquie cambio visual se hará por 0.3s*/
+    position: absolute;
+    right: 1px;
+    border:1px solid #2b2b2b;
+    padding:10px 10px;
+    z-index: 10;/*así el link queda por encima de todo lo del index*/
+}
+a:visited, a:active{
+    color: #2b2b2b;
+}
+a:hover{
+    transform: scale(1.1);
+}
