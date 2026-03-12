@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
 body{
-    background:#1a1a1a;
-    background:url("https://www.transparenttextures.com/patterns/asfalt-dark.png")
+    background:#1a1a1a url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
     color:#eaeaea;
     font-family: "Syne Mono", monospace;
     margin:0;
@@ -11,6 +10,7 @@ body{
 
 h1{
     text-align: center;
+    font-size: 80px;
     margin-top: 100px;
     letter-spacing: 5px;
 }
@@ -44,7 +44,7 @@ a:hover{
 }
 
 img{
-    width:300px;
+    width:280px;
     position:absolute;
     opacity:0.9;
 }
@@ -57,20 +57,22 @@ img{
 .img2{
     top: 700px;
     right:15%;
+    transform: rotate(-6deg);
 }
 
 .img3{
-    top:1200;
+    top:1200px;
     left:20%;
 }
 
 .img4{
     top:1800px;
     right:10%;
+    transform: rotate(5deg);
 }
 
 .img5{
-    top:2400;
+    top:2400px;
     left:30%;
 }
 
@@ -102,7 +104,7 @@ p{
 
 .frase5{
     top:2700px;
-    ight:20%;
+    right:20%;
 }
 
 .playlist{

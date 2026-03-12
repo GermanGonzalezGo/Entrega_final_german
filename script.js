@@ -124,10 +124,10 @@ function numeroAleatorio(min, max) {
 }
 
 // Código para cuerpo.html ---------------------------------------------------------------------------------
-if(lienzoCuerpo){
-const videos = document.querySelectorAll(".video");//esto llama a todos los elementos con la clase video en el html
 
-videos.forEach(video =>{ //para cada video de la lista hace lo que está dentro
+const lienzoCuerpo = document.querySelectorAll(".video");//esto llama a todos los elementos con la clase video en el html
+if(lienzoCuerpo.length > 0){
+lienzoCuerpo.forEach(video =>{ //para cada video de la lista hace lo que está dentro
     const x = Math.random() * (window.innerWidth - 260); 
     //Math.random genera un numero aleatorio entre 0 y 1 y multiplicarlo por el ancho de la pantalla genera una 
     //posición hoizontal aleatoria (lo mismo para Height) los - 320 y 180 son los pixeles que no se tienen en cuenta
