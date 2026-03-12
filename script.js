@@ -140,3 +140,17 @@ lienzoCuerpo.forEach(video =>{ //para cada video de la lista hace lo que está d
     video.style.top = y + "px";
 });
 };
+
+// Código para ruptura.html ---------------------------------------------------------------------------------
+
+const elementosParallax = document.querySelectorAll(".parallax");
+
+window.addEventListener("scroll", () => {
+let scroll = window.scrollY;/*scrollY = cuántos píxeles bajó el usuario*/
+
+elementosParallax.forEach(el => {
+    el.style.transform = "translateY(" + scroll * 0.2 + "px)";
+    /*0.2:significa que la imagen se mueve 5 veces más lento que el scroll*/
+});
+
+});

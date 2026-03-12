@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
 body{
-    background:#1a1a1a url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background:linear-gradient(#1a1a1a,#0f0f0f), url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
     color:#eaeaea;
     font-family: "Syne Mono", monospace;
+    font-weight: 200;
+    font-style: normal;
     margin:0;
     padding:0;
 }
@@ -17,8 +19,8 @@ h1{
 
 .volver{
     position:fixed; /*ancla a la pantalla del navegador, se queda siempre ahí aunque el usuario haga scroll*/
-    top:1px;
-    right:1px;
+    top:20px;
+    right: 35px;
     color: #eaeaea;
     text-decoration: none;
     display: inline-block; /*Se comporta como texto pero tiene tamaño y margen - permite que el link tenga tamaño, borde y se comporte como un bloque (es por seguridad, sin esto alguno estilos no funcionan)*/
@@ -38,15 +40,20 @@ a:hover{
 }
 
 .contenedor{
-    position:relative;
-    height: 3500px;
     margin-top:200px;
 }
 
 img{
-    width:280px;
-    position:absolute;
-    opacity:0.9;
+    width:60vw;
+    max-width:700px;/*ancho máximo*/
+    display:block;/*hace que se comporte como un bloque sólido, además hace salto de líne a todo lo demás*/
+    margin:200px auto;
+    opacity:0.65;
+    transition:0.2s;
+}
+img:hover{
+    transform:scale(1.1);
+    opacity:1;
 }
 
 .img1{
@@ -77,37 +84,24 @@ img{
 }
 
 p{
-    position:absolute;
-    max-width:250px;
-    font-size:18px;
+    max-width:500px;
+    margin:-120px auto 200px auto;/* sube la frase sobre la imagen y deja espacio después */
+    text-align:center;
+    font-size:32px;
+    opacity:0.85;
+    line-height:1.9;
+
+}
+#flecha{
+    font-size: 150px;
+}
+.playlist{ 
+    width: 60vw;
+    max-width: 700px;
+    margin: 200px auto;/*con auto el navegador ajusto solo el ancho*/
+    text-align: center;
 }
 
-.frase1{
-    top:400px;
-    right:20%;
-}
-
-.frase2{
-    top:900px;
-    left:15%;
-}
-
-.frase3{
-    top:1500px;
-    right:25%;
-}
-
-.frase4{
-    top:2100px;
-    left:10%;
-}
-
-.frase5{
-    top:2700px;
-    right:20%;
-}
-
-.playlist{
-    margin-top:200px;
-    padding:100px;
+.YouTube{
+    margin:150px auto;
 }
